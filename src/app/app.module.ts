@@ -9,11 +9,13 @@ import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {SharedModule} from "./shared/models/modules/shared/shared/shared.module";
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

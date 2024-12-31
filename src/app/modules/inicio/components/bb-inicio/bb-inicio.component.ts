@@ -37,14 +37,6 @@ export class BbInicioComponent implements OnInit {
     this.customCursor = document.querySelector('.custom-cursor');
   }
 
-  registrar() {
-    window.open('https://forms.gle/h81o2CYZyEGUznY59');
-  }
-
-  evento(){
-    window.open('https://lu.ma/BinaryTalks');
-  }
-
   repositorio(url: string) {
     window.open(url);
   }

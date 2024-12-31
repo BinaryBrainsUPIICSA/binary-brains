@@ -2,7 +2,7 @@
 <main class="flex flex-col gap-16 mb-4 overflow-y-hidden">
   <section class="flex justify-center gap-4 px-8 pb-24 pt-72 md:px-36 md:pb-48 lg:p-48" id="inicio">
     <div class="flex flex-col text-white w-full lg:w-[75%] gap-4">
-      <h2 class="text-2xl text-[#4CA4CA] pl-1">Hola, somos</h2>
+      <span class="text-2xl text-[#4CA4CA] pl-1">Hola, somos</span>
       <h1 class="text-6xl text-[#4CA4CA] font-bold">Binary Brains</h1>
       <p class="text-2xl text-[#B1D9EB] pl-1">
         Club de Desarrollo de Software en UPIICSA: Aprendiendo y creciendo juntos en tecnología.
@@ -16,33 +16,29 @@
   </section>
 
   <!--  02.- Eventos proximos-->
-  <div class="flex justify-center">
-    <div class="flex items-center text-2xl font-bold w-[90%]">
-      <div class="w-[25%] text-right font-extralight mr-2">
-        <span class="text-[#4EBAE0]" id="eventos">02-</span>Eventos próximos
+  <section class="flex flex-col gap-16 items-center" id="eventos">
+    <header class="flex items-center text-2xl font-bold w-[90%]">
+      <div class="w-min lg:w-max text-right font-extralight mr-2">
+        <h3><span class="text-[#4EBAE0]">02-</span>Eventos proximos</h3>
       </div>
       <div class="flex-grow h-0.5 bg-white"></div>
       <div class="w-5 h-5 transform rotate-45 bg-white"></div>
-    </div>
-  </div>
+    </header>
 
-
-  <!--  Card de eventos-->
-
-  <div class="flex justify-center" (click)="evento()">
-    <div class="w-1/2 rounded-lg cursor-pointer card-hover">
-      <img class="w-full rounded-lg" src="assets/images/bb.webp" alt="Descripción de la imagen">
-      <div class="px-6 py-4">
-        <div class="flex justify-between mb-2 text-xl font-bold">
-          <span class="text-[#4CA4CA]">Binary Talks</span>
-          <div class="flex flex-col items-center justify-center border-2 border-solid rounded-lg luma-border">
-            <div class="text-sm bg-red-800 w-full lu-ma px-4 rounded-t-[7px] text-[#B1D9EB] ">OCT</div>
-            <div class="bg-green-600 w-full lu-ma-day px-4 rounded-b-[7px] text-[#B1D9EB] ">10</div>
-          </div>
-        </div>
-        <div class="flex justify-between">
-          <div class="flex gap-4">
+    <a href="https://lu.ma/BinaryTalks" class="flex justify-center no-underline w-3/4 lg:w-1/2">
+      <article class="rounded-lg card-hover">
+        <img class="w-full rounded-lg" src="assets/images/bb.webp" alt="Evento Binary Talks">
+        <div class="px-6 py-4">
+          <header class="flex justify-between mb-2 text-xl font-bold">
+            <h3 class="text-[#4CA4CA]">Binary Talks</h3>
             <div class="flex flex-col items-center justify-center border-2 border-solid rounded-lg luma-border">
+              <div class="text-sm bg-red-800 w-full lu-ma px-4 rounded-t-[7px] text-[#B1D9EB] ">OCT</div>
+              <div class="bg-green-600 w-full lu-ma-day px-4 rounded-b-[7px] text-[#B1D9EB] ">10</div>
+            </div>
+          </header>
+          <div class="grid grid-cols-[40px_1fr] lg:grid-cols-[40px_1fr_40px_1fr] gap-4 items-start">
+            <!-- Fecha -->
+            <div class="flex flex-col items-center justify-center border-2 border-solid rounded-lg luma-border h-10 w-10">
               <div class="text-sm bg-red-800 w-full lu-ma px-2 rounded-t-[7px] text-[12px] text-[#B1D9EB] ">OCT</div>
               <div
                 class="bg-green-600 w-full lu-ma-day px-2 rounded-b-[7px] text-[12px] flex justify-center text-[#B1D9EB] ">
@@ -50,34 +46,47 @@
               </div>
             </div>
             <div class="flex flex-col">
-              <span class="text-[12px] text-[#B1D9EB]">Martes, 10 de octubre</span>
+              <time class="text-[12px] text-[#B1D9EB]" datetime="2023-10-10">Martes, 10 de octubre</time>
               <span class="text-[12px] text-[#B1D9EB]">10:00 a 17:00</span>
             </div>
-          </div>
-          <div class="flex w-1/2 gap-4">
+
+            <!-- Ubicacion -->
             <div
-              class="flex flex-col justify-center items-center border-2 border-solid luma-border rounded-lg px-3 text-[#B1D9EB] ">
+              class="flex flex-col justify-center items-center border-2 border-solid luma-border rounded-lg px-3 text-[#B1D9EB] w-10 h-10">
               <mat-icon>location_on</mat-icon>
             </div>
             <div class="flex flex-col">
-              <span class="text-[12px] text-[#B1D9EB]">Unidad Profesional Interdisciplinaria de Ingeniería y Ciencias Sociales y Administrativas.</span>
+              <address class="text-[12px] text-[#B1D9EB] not-italic">Unidad Profesional Interdisciplinaria de Ingeniería y Ciencias Sociales y Administrativas.</address>
             </div>
           </div>
-        </div>
-        <span class="text-base m-4 text-[#B1D9EB]">
-          <p>Binary Brains trae nuevamente a diversos ponentes tales como Brujería Tech, DevCaress, Ingesaurio, Arelys
-          Reyes y más. A su vez vendrán varias empresas y comunidades a los cuales podrás participar en sus actividades
-          pensadas para que pases un momento divertido mientras aprendes.</p>
+          <div class="text-base my-4 text-[#B1D9EB]">
+            <p>Binary Brains trae nuevamente a diversos ponentes tales como Brujería Tech, DevCaress, Ingesaurio, Arelys
+            Reyes y más. A su vez vendrán varias empresas y comunidades a los cuales podrás participar en sus actividades
+            pensadas para que pases un momento divertido mientras aprendes.</p>
 
-          <p>De preferencia trae tu laptop para que puedas estar al tanto de diversos talleres que se estarán llevando
-          acabo donde podrás aprender de inteligencia artificial, Machine learning, Hacking ético y de más .a. Puedes
-            agregar aquí información relevante.</p>
-        </span>
-      </div>
-    </div>
-  </div>
+            <p>De preferencia trae tu laptop para que puedas estar al tanto de diversos talleres que se estarán llevando
+            acabo donde podrás aprender de inteligencia artificial, Machine learning, Hacking ético y de más .a. Puedes
+              agregar aquí información relevante.</p>
+          </div>
+        </div>
+      </article>
+    </a>
+  </section>
 
   <!--  03.- Repositorios populares-->
+
+  <section id="repos" class="flex flex-col gap-16 items-center">
+    <header class="flex items-center text-2xl font-bold w-[90%]">
+      <div class="w-5 h-5 transform rotate-45 bg-white"></div>
+      <div class="flex-grow h-0.5 bg-white"></div>
+      <div class="w-min lg:w-max text-right font-extralight ml-2">
+        <h3>
+          <span class="text-[#4EBAE0]">03-</span>
+          Repositorios populares
+        </h3>
+      </div>
+    </header>
+  </section>
 
   <div class="flex justify-center">
     <div class="flex items-center text-2xl font-bold w-[90%]">
@@ -89,7 +98,7 @@
   </div>
   <!--  album de repositorios-->
 
-  <div class="flex flex-row justify-center gap-4" id="repos">
+  <div class="flex flex-row justify-center gap-4">
     <div *ngFor="let album of albums" class="flex-shrink-0 max-w-sm overflow-hidden transition rounded shadow-lg cursor-pointer card-hover" (click)="repositorio(album.link)">
       <img class="w-full opacity-90" src="{{album.image}}" alt="Sunset in the mountains">
       <div class="px-6 py-4">

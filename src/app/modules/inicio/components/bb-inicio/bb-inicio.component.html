@@ -1,48 +1,44 @@
 <div class="custom-cursor -z-10"></div>
-<div class="flex flex-col gap-16 overflow-y-hidden mb-4">
-  <div class="flex justify-center p-48 gap-4 inicio">
-    <div class="flex flex-col text-white w-[75%] gap-4">
-      <div class="text-2xl text-[#4CA4CA] pl-1">Hola, somos</div>
-      <span class="text-6xl text-[#4CA4CA] font-bold">Binary Brains</span>
-      <div class="text-2xl text-[#B1D9EB] pl-1">Club de Desarrollo de Software en UPIICSA: Aprendiendo y creciendo
-        juntos en tecnología.
-      </div>
+<main class="flex overflow-y-hidden flex-col gap-16 mb-4">
+  <section class="flex gap-4 justify-center px-8 pt-72 pb-24 md:px-36 md:pb-48 lg:p-48" id="inicio">
+    <div class="flex flex-col text-white w-full lg:w-[75%] gap-4">
+      <span class="text-2xl text-[#4CA4CA] pl-1">Hola, somos</span>
+      <h1 class="text-6xl text-[#4CA4CA] font-bold">Binary Brains</h1>
+      <p class="text-2xl text-[#B1D9EB] pl-1">
+        Club de Desarrollo de Software en UPIICSA: Aprendiendo y creciendo juntos en tecnología.
+      </p>
       <div class="pl-1">
-        <button class="button" (click)="registrar()">
-          <p>Registrate</p>
-        </button>
+        <a href="https://forms.gle/h81o2CYZyEGUznY59" target="_blank" class="button">
+          Registrate
+        </a>
       </div>
     </div>
-  </div>
+  </section>
 
   <!--  02.- Eventos proximos-->
-  <div class="flex justify-center">
-    <div class="flex items-center text-2xl font-bold w-[90%]">
-      <div class="w-[25%] text-right font-extralight mr-2">
-        <span class="text-[#4EBAE0] eventos">02-</span>Eventos próximos
+  <section class="flex flex-col gap-16 items-center" id="eventos">
+    <header class="flex items-center text-2xl font-bold w-[90%]">
+      <div class="mr-2 w-min font-extralight text-right lg:w-max">
+        <h3><span class="text-[#4EBAE0]">02-</span>Eventos proximos</h3>
       </div>
       <div class="flex-grow h-0.5 bg-white"></div>
-      <div class="w-5 h-5 transform rotate-45 bg-white"></div>
-    </div>
-  </div>
+      <div class="w-5 h-5 bg-white transform rotate-45"></div>
+    </header>
 
-
-  <!--  Card de eventos-->
-
-  <div class="flex justify-center" (click)="evento()">
-    <div class="w-1/2 card-hover cursor-pointer rounded-lg">
-      <img class="w-full rounded-lg" src="assets/images/bb.webp" alt="Descripción de la imagen">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2 flex justify-between">
-          <span class="text-[#4CA4CA]">Binary Talks</span>
-          <div class="flex flex-col justify-center items-center border-2 border-solid luma-border rounded-lg">
-            <div class="text-sm bg-red-800 w-full lu-ma px-4 rounded-t-[7px] text-[#B1D9EB] ">OCT</div>
-            <div class="bg-green-600 w-full lu-ma-day px-4 rounded-b-[7px] text-[#B1D9EB] ">10</div>
-          </div>
-        </div>
-        <div class="flex justify-between">
-          <div class="flex gap-4">
-            <div class="flex flex-col justify-center items-center border-2 border-solid luma-border rounded-lg">
+    <a href="https://lu.ma/BinaryTalks" class="flex justify-center no-underline w-[90%] lg:w-1/2">
+      <article class="rounded-lg card-hover">
+        <img class="w-full rounded-lg" src="assets/images/bb.webp" alt="Evento Binary Talks">
+        <div class="px-6 py-4">
+          <header class="flex justify-between mb-2 text-xl font-bold">
+            <h3 class="text-[#4CA4CA]">Binary Talks</h3>
+            <div class="flex flex-col justify-center items-center rounded-lg border-2 border-solid luma-border">
+              <div class="text-sm bg-red-800 w-full lu-ma px-4 rounded-t-[7px] text-[#B1D9EB] ">OCT</div>
+              <div class="bg-green-600 w-full lu-ma-day px-4 rounded-b-[7px] text-[#B1D9EB] ">10</div>
+            </div>
+          </header>
+          <div class="grid grid-cols-[40px_1fr] lg:grid-cols-[40px_1fr_40px_1fr] gap-4 items-start">
+            <!-- Fecha -->
+            <div class="flex flex-col justify-center items-center w-10 h-10 rounded-lg border-2 border-solid luma-border">
               <div class="text-sm bg-red-800 w-full lu-ma px-2 rounded-t-[7px] text-[12px] text-[#B1D9EB] ">OCT</div>
               <div
                 class="bg-green-600 w-full lu-ma-day px-2 rounded-b-[7px] text-[12px] flex justify-center text-[#B1D9EB] ">
@@ -50,88 +46,67 @@
               </div>
             </div>
             <div class="flex flex-col">
-              <span class="text-[12px] text-[#B1D9EB]">Martes, 10 de octubre</span>
+              <time class="text-[12px] text-[#B1D9EB]" datetime="2023-10-10">Martes, 10 de octubre</time>
               <span class="text-[12px] text-[#B1D9EB]">10:00 a 17:00</span>
             </div>
-          </div>
-          <div class="flex gap-4 w-1/2">
+
+            <!-- Ubicacion -->
             <div
-              class="flex flex-col justify-center items-center border-2 border-solid luma-border rounded-lg px-3 text-[#B1D9EB] ">
+              class="flex flex-col justify-center items-center border-2 border-solid luma-border rounded-lg px-3 text-[#B1D9EB] w-10 h-10">
               <mat-icon>location_on</mat-icon>
             </div>
             <div class="flex flex-col">
-              <span class="text-[12px] text-[#B1D9EB]">Unidad Profesional Interdisciplinaria de Ingeniería y Ciencias Sociales y Administrativas.</span>
+              <address class="text-[12px] text-[#B1D9EB] not-italic">Unidad Profesional Interdisciplinaria de Ingeniería y Ciencias Sociales y Administrativas.</address>
             </div>
           </div>
-        </div>
-        <span class="text-base m-4 text-[#B1D9EB]">
-          <p>Binary Brains trae nuevamente a diversos ponentes tales como Brujería Tech, DevCaress, Ingesaurio, Arelys
-          Reyes y más. A su vez vendrán varias empresas y comunidades a los cuales podrás participar en sus actividades
-          pensadas para que pases un momento divertido mientras aprendes.</p>
+          <div class="text-base my-4 text-[#B1D9EB]">
+            <p>Binary Brains trae nuevamente a diversos ponentes tales como Brujería Tech, DevCaress, Ingesaurio, Arelys
+            Reyes y más. A su vez vendrán varias empresas y comunidades a los cuales podrás participar en sus actividades
+            pensadas para que pases un momento divertido mientras aprendes.</p>
 
-          <p>De preferencia trae tu laptop para que puedas estar al tanto de diversos talleres que se estarán llevando
-          acabo donde podrás aprender de inteligencia artificial, Machine learning, Hacking ético y de más .a. Puedes
-            agregar aquí información relevante.</p>
-        </span>
-      </div>
-    </div>
-  </div>
+            <p>De preferencia trae tu laptop para que puedas estar al tanto de diversos talleres que se estarán llevando
+            acabo donde podrás aprender de inteligencia artificial, Machine learning, Hacking ético y de más .a. Puedes
+              agregar aquí información relevante.</p>
+          </div>
+        </div>
+      </article>
+    </a>
+  </section>
 
   <!--  03.- Repositorios populares-->
 
-  <div class="flex justify-center">
-    <div class="flex items-center text-2xl font-bold w-[90%]">
-      <div class="w-5 h-5 transform rotate-45 bg-white"></div>
+  <section id="repos" class="flex flex-col gap-16 items-center">
+    <header class="flex items-center text-2xl font-bold w-[90%]">
+      <div class="w-5 h-5 bg-white transform rotate-45"></div>
       <div class="flex-grow h-0.5 bg-white"></div>
-      <div class="w-[25%] text-right font-extralight mr-2"><span class="text-[#4EBAE0]">03-</span>Repositorios populares
+      <div class="ml-2 w-min font-extralight text-right lg:w-max">
+        <h3>
+          <span class="text-[#4EBAE0]">03-</span>
+          Repositorios populares
+        </h3>
       </div>
+    </header>
+
+    <div class="flex flex-row flex-wrap gap-4 justify-center basis-full">
+      <a *ngFor="let repositorio of repositorios" [href]="repositorio.link" target="_blank" rel="noopener noreferrer" class="w-[90%] md:max-w-sm overflow-hidden transition rounded shadow-lg cursor-pointer card-hover">
+        <article>
+          <img class="w-full opacity-90" [src]="repositorio.image" [alt]="repositorio.description">
+          <div class="px-6 py-4">
+            <h3 class="font-bold text-xl mb-2 text-[#4CA4CA]">{{repositorio.title}}</h3>
+            <p class="text-base text-[#B1D9EB]">
+              {{repositorio.description}}
+            </p>
+          </div>
+          <footer class="flex flex-wrap px-6">
+            <ng-container *ngFor="let tecnologia of repositorio.tecnologias">
+            <span class="inline-block px-3 py-1 mr-2 mb-2 text-sm font-light text-white rounded-full chips">
+              <span class="text-[#4CA4CA]">{{tecnologia}}</span>
+            </span>
+            </ng-container>
+          </footer>
+        </article>
+      </a>
     </div>
-  </div>
-  <!--  album de repositorios-->
+  </section>
 
-  <div class="flex flex-row gap-4 justify-center repositorios">
-    <div *ngFor="let album of albums" class="max-w-sm rounded overflow-hidden shadow-lg
-    flex-shrink-0 card-hover cursor-pointer transition" (click)="repositorio(album.link)">
-      <img class="w-full opacity-90" src="{{album.image}}" alt="Sunset in the mountains">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2 text-[#4CA4CA]">{{album.title}}</div>
-        <p class="text-base text-[#B1D9EB]">
-          {{album.description}}
-        </p>
-      </div>
-      <div class="px-6 flex flex-wrap">
-        <ng-container *ngFor="let tecnologia of album.tecnologias">
-        <span class="inline-block chips rounded-full px-3 py-1 text-sm font-light text-white mr-2 mb-2">
-          <span class="text-[#4CA4CA]">{{tecnologia}}</span>
-        </span>
-        </ng-container>
-      </div>
-    </div>
-  </div>
-</div>
-<footer class="bg-gray-900 text-white py-6">
-  <div class="container mx-auto flex justify-center">
-    <a href="https://www.facebook.com/profile.php?id=100091984830340&_rdc=1&_rdr"
-       class="text-gray-400 hover:text-white mr-4 rounded-full p-2 bg-transparent"
-       target="_blank">
-      <i class="fa fa-facebook fa-lg"></i>
-    </a>
-    <a href="https://twitter.com/DevsUpiics48486"
-       class="text-gray-400 hover:text-white mr-4 rounded-full p-2 bg-transparent"
-       target="_blank">
-      <i class="fa fa-twitter fa-lg"></i>
-    </a>
-    <a href="https://www.instagram.com/bbupiicsa/"
-       class="text-gray-400 hover:text-white mr-4 rounded-full p-2 bg-transparent"
-       target="_blank">
-      <i class="fa fa-instagram fa-lg"></i>
-    </a>
-    <a href="https://github.com/BinaryBrainsUPIICSA"
-       class="text-gray-400 hover:text-white rounded-full p-2 bg-transparent"
-       target="_blank">
-      <i class="fa fa-github fa-lg"></i>
-    </a>
-  </div>
-</footer>
-
-
+</main>

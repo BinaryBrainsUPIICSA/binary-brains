@@ -1,15 +1,13 @@
-<nav class="flex p-6 justify-center fixed top-0 left-0 right-0 bg-[#060513] mr-[17px] z-10">
-  <div class="flex items-center justify-between w-[75%]">
-    <div class="flex items-center space-x-4">
-      <img src="assets/images/logo.svg" alt="Logo" class="h-12">
+<nav class="p-6 fixed top-0 left-0 w-full bg-[#060513] z-10">
+    <div class="flex flex-col lg:flex-row w-[75%] mx-auto justify-between items-center gap-4 lg:gap-0">
+      <img src="assets/images/logo.svg" alt="Binary Brains logo" class="h-12">
+      <div class="flex flex-col md:flex-row md:gap-16 items-start md:items-center">
+        <a class="text-white font-extralight hover:text-[#5CCDFF]" [routerLink]="currentPath" fragment="inicio">
+          <span class="text-[#4BA2C9] ">01-</span> Bienvenida</a>
+        <a class="text-white font-extralight hover:text-[#5CCDFF]" [routerLink]="currentPath" fragment="eventos">
+          <span class="text-[#4BA2C9]">02-</span> Eventos próximos</a>
+        <a class="text-white font-extralight hover:text-[#5CCDFF]" [routerLink]="currentPath" fragment="repos">
+          <span class="text-[#4BA2C9]">03-</span> Repositorios populares</a>
+      </div>
     </div>
-    <div class="flex items-center gap-16">
-      <a class="text-white font-extralight hover:text-[#5CCDFF] hover:cursor-pointer" (click)="scrollToInicio()">
-        <span class="text-[#4BA2C9] hover:cursor-pointer">01-</span> Bienvenida</a>
-      <a class="text-white font-extralight hover:text-[#5CCDFF] hover:cursor-pointer" (click)="scrollToEventos()">
-        <span class="text-[#4BA2C9]">02-</span> Eventos próximos</a>
-      <a class="text-white font-extralight hover:text-[#5CCDFF] hover:cursor-pointer" (click)="scrollToRepositorios()">
-        <span class="text-[#4BA2C9]">03-</span> Repositorios populares</a>
-    </div>
-  </div>
 </nav>

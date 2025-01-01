@@ -21,8 +21,4 @@ export class BbInicioComponent implements OnInit {
   ngOnInit() {
     this.customCursor = document.querySelector('.custom-cursor');
   }
-
-  repositorio(url: string) {
-    window.open(url);
-  }
 }

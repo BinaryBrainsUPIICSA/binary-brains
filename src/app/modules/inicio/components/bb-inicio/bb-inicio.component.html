@@ -25,7 +25,7 @@
       <div class="w-5 h-5 transform rotate-45 bg-white"></div>
     </header>
 
-    <a href="https://lu.ma/BinaryTalks" class="flex justify-center no-underline w-3/4 lg:w-1/2">
+    <a href="https://lu.ma/BinaryTalks" class="flex justify-center no-underline w-[90%] lg:w-1/2">
       <article class="rounded-lg card-hover">
         <img class="w-full rounded-lg" src="assets/images/bb.webp" alt="Evento Binary Talks">
         <div class="px-6 py-4">
@@ -86,34 +86,27 @@
         </h3>
       </div>
     </header>
+
+    <div class="flex flex-row basis-full flex-wrap justify-center gap-4">
+      <a *ngFor="let album of albums" [href]="album.link" target="_blank" rel="noopener noreferrer" class="w-[90%] md:max-w-sm overflow-hidden transition rounded shadow-lg cursor-pointer card-hover">
+        <article>
+          <img class="w-full opacity-90" [src]="album.image" [alt]="album.description">
+          <div class="px-6 py-4">
+            <h3 class="font-bold text-xl mb-2 text-[#4CA4CA]">{{album.title}}</h3>
+            <p class="text-base text-[#B1D9EB]">
+              {{album.description}}
+            </p>
+          </div>
+          <footer class="flex flex-wrap px-6">
+            <ng-container *ngFor="let tecnologia of album.tecnologias">
+            <span class="inline-block px-3 py-1 mb-2 mr-2 text-sm font-light text-white rounded-full chips">
+              <span class="text-[#4CA4CA]">{{tecnologia}}</span>
+            </span>
+            </ng-container>
+          </footer>
+        </article>
+      </a>
+    </div>
   </section>
 
-  <div class="flex justify-center">
-    <div class="flex items-center text-2xl font-bold w-[90%]">
-      <div class="w-5 h-5 transform rotate-45 bg-white"></div>
-      <div class="flex-grow h-0.5 bg-white"></div>
-      <div class="w-[25%] text-right font-extralight mr-2"><span class="text-[#4EBAE0]">03-</span>Repositorios populares
-      </div>
-    </div>
-  </div>
-  <!--  album de repositorios-->
-
-  <div class="flex flex-row justify-center gap-4">
-    <div *ngFor="let album of albums" class="flex-shrink-0 max-w-sm overflow-hidden transition rounded shadow-lg cursor-pointer card-hover" (click)="repositorio(album.link)">
-      <img class="w-full opacity-90" src="{{album.image}}" alt="Sunset in the mountains">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2 text-[#4CA4CA]">{{album.title}}</div>
-        <p class="text-base text-[#B1D9EB]">
-          {{album.description}}
-        </p>
-      </div>
-      <div class="flex flex-wrap px-6">
-        <ng-container *ngFor="let tecnologia of album.tecnologias">
-        <span class="inline-block px-3 py-1 mb-2 mr-2 text-sm font-light text-white rounded-full chips">
-          <span class="text-[#4CA4CA]">{{tecnologia}}</span>
-        </span>
-        </ng-container>
-      </div>
-    </div>
-  </div>
 </main>

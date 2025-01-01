@@ -1,4 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import { REPOSITORIOS } from 'src/app/data/repositorios';
 
 @Component({
   selector: 'app-bb-inicio',
@@ -8,23 +9,7 @@ import {Component, HostListener, OnInit} from '@angular/core';
 export class BbInicioComponent implements OnInit {
   customCursor: HTMLElement | null = null;
 
-  albums = [
-    {
-      title: '100 dias 10 proyectos',
-      image: 'assets/images/rrr.gif',
-      description: 'En este desafío harémos un proyecto de software todos los días para mejorar nuestras habilidades técnicas como desarrolladores BACKEND y FRONTEND, lograrémos estos objetivos practicando todos los días porque la práctica hace al maestro.',
-      tecnologias: ['HTML', 'CSS', 'JS', 'Java', 'Arduino', 'MySQL', 'React', 'Python', 'Spring', 'Ts'],
-      link: 'https://github.com/xVrzBx/100Days100Proyects'
-    },
-    {
-      title: 'Proximamente ...',
-      image: 'assets/images/qqq.jpg',
-      description: 'En Binari Brains, estamos trabajando duro en emocionantes proyectos que llegarán muy pronto.',
-      tecnologias: [],
-      link: 'https://github.com/BinaryBrainsUPIICSA'
-    },
-    // Agrega más álbumes según sea necesario
-  ];
+  repositorios = REPOSITORIOS
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {

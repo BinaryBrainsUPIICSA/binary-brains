@@ -1,6 +1,6 @@
 <div class="custom-cursor -z-10"></div>
-<main class="flex flex-col gap-16 mb-4 overflow-y-hidden">
-  <section class="flex justify-center gap-4 px-8 pb-24 pt-72 md:px-36 md:pb-48 lg:p-48" id="inicio">
+<main class="flex overflow-y-hidden flex-col gap-16 mb-4">
+  <section class="flex gap-4 justify-center px-8 pt-72 pb-24 md:px-36 md:pb-48 lg:p-48" id="inicio">
     <div class="flex flex-col text-white w-full lg:w-[75%] gap-4">
       <span class="text-2xl text-[#4CA4CA] pl-1">Hola, somos</span>
       <h1 class="text-6xl text-[#4CA4CA] font-bold">Binary Brains</h1>
@@ -18,11 +18,11 @@
   <!--  02.- Eventos proximos-->
   <section class="flex flex-col gap-16 items-center" id="eventos">
     <header class="flex items-center text-2xl font-bold w-[90%]">
-      <div class="w-min lg:w-max text-right font-extralight mr-2">
+      <div class="mr-2 w-min font-extralight text-right lg:w-max">
         <h3><span class="text-[#4EBAE0]">02-</span>Eventos proximos</h3>
       </div>
       <div class="flex-grow h-0.5 bg-white"></div>
-      <div class="w-5 h-5 transform rotate-45 bg-white"></div>
+      <div class="w-5 h-5 bg-white transform rotate-45"></div>
     </header>
 
     <a href="https://lu.ma/BinaryTalks" class="flex justify-center no-underline w-[90%] lg:w-1/2">
@@ -31,14 +31,14 @@
         <div class="px-6 py-4">
           <header class="flex justify-between mb-2 text-xl font-bold">
             <h3 class="text-[#4CA4CA]">Binary Talks</h3>
-            <div class="flex flex-col items-center justify-center border-2 border-solid rounded-lg luma-border">
+            <div class="flex flex-col justify-center items-center rounded-lg border-2 border-solid luma-border">
               <div class="text-sm bg-red-800 w-full lu-ma px-4 rounded-t-[7px] text-[#B1D9EB] ">OCT</div>
               <div class="bg-green-600 w-full lu-ma-day px-4 rounded-b-[7px] text-[#B1D9EB] ">10</div>
             </div>
           </header>
           <div class="grid grid-cols-[40px_1fr] lg:grid-cols-[40px_1fr_40px_1fr] gap-4 items-start">
             <!-- Fecha -->
-            <div class="flex flex-col items-center justify-center border-2 border-solid rounded-lg luma-border h-10 w-10">
+            <div class="flex flex-col justify-center items-center w-10 h-10 rounded-lg border-2 border-solid luma-border">
               <div class="text-sm bg-red-800 w-full lu-ma px-2 rounded-t-[7px] text-[12px] text-[#B1D9EB] ">OCT</div>
               <div
                 class="bg-green-600 w-full lu-ma-day px-2 rounded-b-[7px] text-[12px] flex justify-center text-[#B1D9EB] ">
@@ -77,9 +77,9 @@
 
   <section id="repos" class="flex flex-col gap-16 items-center">
     <header class="flex items-center text-2xl font-bold w-[90%]">
-      <div class="w-5 h-5 transform rotate-45 bg-white"></div>
+      <div class="w-5 h-5 bg-white transform rotate-45"></div>
       <div class="flex-grow h-0.5 bg-white"></div>
-      <div class="w-min lg:w-max text-right font-extralight ml-2">
+      <div class="ml-2 w-min font-extralight text-right lg:w-max">
         <h3>
           <span class="text-[#4EBAE0]">03-</span>
           Repositorios populares
@@ -87,19 +87,19 @@
       </div>
     </header>
 
-    <div class="flex flex-row basis-full flex-wrap justify-center gap-4">
-      <a *ngFor="let album of albums" [href]="album.link" target="_blank" rel="noopener noreferrer" class="w-[90%] md:max-w-sm overflow-hidden transition rounded shadow-lg cursor-pointer card-hover">
+    <div class="flex flex-row flex-wrap gap-4 justify-center basis-full">
+      <a *ngFor="let repositorio of repositorios" [href]="repositorio.link" target="_blank" rel="noopener noreferrer" class="w-[90%] md:max-w-sm overflow-hidden transition rounded shadow-lg cursor-pointer card-hover">
         <article>
-          <img class="w-full opacity-90" [src]="album.image" [alt]="album.description">
+          <img class="w-full opacity-90" [src]="repositorio.image" [alt]="repositorio.description">
           <div class="px-6 py-4">
-            <h3 class="font-bold text-xl mb-2 text-[#4CA4CA]">{{album.title}}</h3>
+            <h3 class="font-bold text-xl mb-2 text-[#4CA4CA]">{{repositorio.title}}</h3>
             <p class="text-base text-[#B1D9EB]">
-              {{album.description}}
+              {{repositorio.description}}
             </p>
           </div>
           <footer class="flex flex-wrap px-6">
-            <ng-container *ngFor="let tecnologia of album.tecnologias">
-            <span class="inline-block px-3 py-1 mb-2 mr-2 text-sm font-light text-white rounded-full chips">
+            <ng-container *ngFor="let tecnologia of repositorio.tecnologias">
+            <span class="inline-block px-3 py-1 mr-2 mb-2 text-sm font-light text-white rounded-full chips">
               <span class="text-[#4CA4CA]">{{tecnologia}}</span>
             </span>
             </ng-container>
